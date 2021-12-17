@@ -16,7 +16,6 @@ router.get('/', function(req, res, next) {
         const gameId1 = uuidv1();
         console.log(gameId1); // -> '6c84fb90-12c4-11e1-840d-7b25c5ee775a'   
         res.redirect('/game?gameId='+gameId1);
-        console.log(req);
     } else if(req._parsedOriginalUrl.query != null) {
         console.log(req._parsedOriginalUrl.query);
     };
