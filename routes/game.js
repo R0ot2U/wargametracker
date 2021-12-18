@@ -17,7 +17,7 @@ async function asyncDB() {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM games');
       const results = { 'results': (result) ? result.rows : null};
-      res.send(results);
+      console.log("results: "+results);
       client.release();
     } catch (err) {
       console.error(err);
