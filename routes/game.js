@@ -12,14 +12,20 @@ const pool = new Pool({
   }
 });
 
-var pgp = require('pg-promise')(/* options */)
-var db = pgp(pool);
+async function asyncDB() {
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM games');
+      const results = { 'results': (result) ? result.rows : null};
+      res.send(results);
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+  };
 
-// a query with in-line value transformation + conversion:
-db.one('SELECT count(*) FROM games', [], c => +c.count)
-    .then(count => {
-        // count = a proper integer value, rather than an object with a string
-    });
+  asyncDB();
   
 var express = require('express');
 var path = require('path');
