@@ -11,6 +11,13 @@ const pool = new Pool({
     rejectUnauthorized: false
   }
 });
+var db = pgp(process.env.DATABASE_URL);
+
+// a query with in-line value transformation + conversion:
+db.one('SELECT count(*) FROM games', [], c => +c.count)
+    .then(count => {
+        // count = a proper integer value, rather than an object with a string
+    });
   
 var express = require('express');
 var path = require('path');
