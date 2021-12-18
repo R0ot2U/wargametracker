@@ -13,7 +13,7 @@ const pool = new Pool({
 });
 
 var pgp = require('pg-promise')(/* options */)
-var db = pgp(process.env.DATABASE_URL+"?ssl=true");
+var db = pgp(pool);
 
 // a query with in-line value transformation + conversion:
 db.one('SELECT count(*) FROM games', [], c => +c.count)
