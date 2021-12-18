@@ -11,6 +11,8 @@ const pool = new Pool({
     rejectUnauthorized: false
   }
 });
+
+var pgp = require('pg-promise')(/* options */)
 var db = pgp(process.env.DATABASE_URL);
 
 // a query with in-line value transformation + conversion:
