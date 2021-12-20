@@ -48,7 +48,7 @@ router.get('/', async function(req, res) {
             res.render('game', {gameId: gameId});
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
-            var results2 = await asyncDB();
+            //var results2 = await asyncDB();
             //res.json(results2);
         };
     } catch (err) {
