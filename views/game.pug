@@ -1,11 +1,9 @@
 extends layout
 
 block scripts
-  script(src='/javascripts/trackerController.js')
   script.
     var gameIdToSet = "#{gameId}"; 
-    const urlParams = new URLSearchParams(queryString);
-    urlParams.append('gameId', {gameIdToSet});
+  script(src='/javascripts/trackerController.js')
 
 block content
   h1= title
