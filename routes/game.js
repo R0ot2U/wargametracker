@@ -42,15 +42,14 @@ router.get('/', async function(req, res, next) {
                 "INSERT INTO games(game_id)VALUES('"+gameId+"')",
                 (err, res) => {
                 console.log(err, res);
-                pool.end();
+                //pool.end();
                 }
             );  
             res.render('game', {gameId: gameId, title: "Game Tracker"});
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
-            //var results2 = await asyncDB();
-            res.send('test');
-            //next();
+            var results2 = await asyncDB();
+            res.json(results2);
         };
     } catch (err) {
         console.error(err);
