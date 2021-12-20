@@ -33,7 +33,6 @@ var router = express.Router();
 /* GET game tracker page. */
 router.get('/', async function(req, res) {
     try {
-        res.sendFile(path.join(__dirname+'/tracker.html'));
         console.log(req._parsedOriginalUrl.query);
         if(req._parsedOriginalUrl.query == null){
             //generate a unique id based on timestamp uuidv4 would be a unique id that's random
