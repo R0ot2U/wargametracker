@@ -31,7 +31,7 @@ var path = require('path');
 var router = express.Router();
 
 /* GET game tracker page. */
-router.get('/', async function(req, res) {
+router.get('/', async function(req, res, next) {
     try {
         console.log(req._parsedOriginalUrl.query);
         if(req._parsedOriginalUrl.query == null){
@@ -49,7 +49,8 @@ router.get('/', async function(req, res) {
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
             //var results2 = await asyncDB();
-            //res.json(results2);
+            res.send('test');
+            //next();
         };
     } catch (err) {
         console.error(err);
