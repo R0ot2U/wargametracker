@@ -4,6 +4,7 @@ block scripts
   script(src='/javascripts/trackerController.js')
   script.
     var gameIdToSet = "#{gameId}"; 
+    urlParams.append('gameId', {gameIdToSet});
 
 block content
   h1= title
