@@ -31,7 +31,7 @@ var path = require('path');
 var router = express.Router();
 
 /* GET game tracker page. */
-router.get('/game', async function(req, res) {
+router.get('/', async function(req, res) {
     try {
         res.sendFile(path.join(__dirname+'/tracker.html'));
         console.log(req._parsedOriginalUrl.query);
