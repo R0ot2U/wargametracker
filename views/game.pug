@@ -1,8 +1,9 @@
-html
-  head 
-    title Game Tracker
-    script(src='/javascripts/trackerController.js')
+extends layout
 
-  block content
-    h1= Game Tracker
-    p Welcome to Game Tracker
+head
+  title #{title}
+  script(src='/javascripts/trackerController.js')
+
+block content
+  h1= title
+  p Welcome to #{title}
