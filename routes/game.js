@@ -42,7 +42,7 @@ router.get('/', async function(req, res) {
                 "INSERT INTO games(game_id)VALUES('"+gameId+"')",
                 (err, res) => {
                 console.log(err, res);
-                pool.end();
+                //pool.end();
                 }
             );  
             res.render('game', {gameId: gameId, title: "Game Tracker"});
