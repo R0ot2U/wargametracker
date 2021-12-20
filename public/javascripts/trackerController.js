@@ -9,6 +9,3 @@ urlParams.append('gameId', gameIdToSet);
 
 const gameId = urlParams.get('gameId');
 console.log(gameId);
-
-var url = window.location.href;
-window.location.href = url;
