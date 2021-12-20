@@ -19,20 +19,19 @@ async function asyncDB() {
       const results = { 'results': (result) ? result.rows : null};
       console.log("results: "+results);
       client.release();
+      return results;
     } catch (err) {
       console.error(err);
       res.send("Error " + err);
     }
   };
-
-  asyncDB();
   
 var express = require('express');
 var path = require('path');
 var router = express.Router();
 
 /* GET game tracker page. */
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
     res.sendFile(path.join(__dirname+'/tracker.html'));
     console.log(req._parsedOriginalUrl.query);
     if(req._parsedOriginalUrl.query == null){
@@ -49,6 +48,8 @@ router.get('/', function(req, res, next) {
         res.redirect('/game?gameId='+gameId);
     } else if(req._parsedOriginalUrl.query != null) {
         console.log(req._parsedOriginalUrl.query);
+        var results2 = await asyncDB();
+        res.send(results2);
     };
 });
 
