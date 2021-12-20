@@ -31,7 +31,7 @@ var path = require('path');
 var router = express.Router();
 
 /* GET game tracker page. */
-router.get('/', async function(req, res, next) {
+router.get('/', async function(req, res) {
     try {
         res.sendFile(path.join(__dirname+'/tracker.html'));
         console.log(req._parsedOriginalUrl.query);
@@ -50,7 +50,7 @@ router.get('/', async function(req, res, next) {
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
             var results2 = await asyncDB();
-            res.send(results2);
+            res.json(results2);
         };
     } catch (err) {
         console.error(err);
