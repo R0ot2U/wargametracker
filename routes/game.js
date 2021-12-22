@@ -128,7 +128,7 @@ router.get('/', async function(req, res, next) {
                     "player2_cp_start": results2.player2_cp_start,
                     "player2_cp_current": results2.player2_cp_current
                 }
-
+            console.log("gameData: "+gameData);
             res.render('tracker', {"gameData": gameData });
         };
     } catch (err) {
