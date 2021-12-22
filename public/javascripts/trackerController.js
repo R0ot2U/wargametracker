@@ -12,3 +12,5 @@ window.history.replaceState({}, '', `${location.pathname}?${params}`);
 
 const gameId = urlParams.get('gameId');
 console.log(gameId);
+
+location.reload();
