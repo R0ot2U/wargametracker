@@ -5,7 +5,9 @@ block scripts
 
 block content
   h1 GameId: #{gameData.game_id}
-  .section
+  a.logo(href='https://front.codes/' target='_blank')
+  img(src='https://assets.codepen.io/1462889/fcy.png' alt='')
+.section
   .container
     .row.full-height.justify-content-center
       .col-12.text-center.align-self-center.py-5
@@ -15,16 +17,32 @@ block content
             span Sign Up
           input#reg-log.checkbox(type='checkbox' name='reg-log')
           label(for='reg-log')
-          div.card-3d-wrap.mx-auto
-            div.card-3d-wrapper
-              div.card-front
-                div.center-wrap
-                  div.form-group
-                    label(for='p1name') Player 1:
-                    input#p1name.form-style(type='text' name='p1name' value=gameData.player1_name)
-                    i.input-icon.uil.uil-user
-                  div.form-group.mt-2
-                    label(for='p2name') Player 2:
-                    input#p2name.form-style(type='text' name='p2name' value=gameData.player2_name)
-                    i.input-icon.uil.uil-user
-                  input.btn.mt-4(type='submit' value='Save')
+          .card-3d-wrap.mx-auto
+            .card-3d-wrapper
+              .card-front
+                .center-wrap
+                  .section.text-center
+                    h4.mb-4.pb-3 Log In
+                    .form-group
+                      input#logemail.form-style(type='email' name='logemail' placeholder='Your Email' autocomplete='off')
+                      i.input-icon.uil.uil-at
+                    .form-group.mt-2
+                      input#logpass.form-style(type='password' name='logpass' placeholder='Your Password' autocomplete='off')
+                      i.input-icon.uil.uil-lock-alt
+                    a.btn.mt-4(href='#') submit
+                    p.mb-0.mt-4.text-center
+                      a.link(href='#0') Forgot your password?
+              .card-back
+                .center-wrap
+                  .section.text-center
+                    h4.mb-4.pb-3 Sign Up
+                    .form-group
+                      input#logname.form-style(type='text' name='logname' placeholder='Your Full Name' autocomplete='off')
+                      i.input-icon.uil.uil-user
+                    .form-group.mt-2
+                      input#logemail.form-style(type='email' name='logemail' placeholder='Your Email' autocomplete='off')
+                      i.input-icon.uil.uil-at
+                    .form-group.mt-2
+                      input#logpass.form-style(type='password' name='logpass' placeholder='Your Password' autocomplete='off')
+                      i.input-icon.uil.uil-lock-alt
+                    a.btn.mt-4(href='#') submit
