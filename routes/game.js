@@ -49,7 +49,7 @@ router.get('/', async function(req, res, next) {
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
             var results2 = await asyncDB(req.query.gameId);
-
+            console.log(results2.length);
             if(results2.length==1) {
                 var gameData = {
                     "game_id": results[0].gameId,
