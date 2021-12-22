@@ -48,8 +48,7 @@ router.get('/', async function(req, res, next) {
             res.render('game', {gameId: gameId, title: "Game Tracker"});
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
-            console.log(gameIdToSet);
-            var results2 = await asyncDB(gameIdToSet);
+            var results2 = await asyncDB('7c483740-634a-11ec-bcea-ed90a3e8d812');
             res.json(results2);
         };
     } catch (err) {
