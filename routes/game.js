@@ -49,8 +49,7 @@ router.get('/', async function(req, res, next) {
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
             var results2 = await asyncDB(req.query.gameId);
-            console.log(results2.rows);
-            if(results2[0].rows.length==1) {
+            //console.log(results2.rows);
                 var gameData = {
                     "game_id": results[0].gameId,
                     "created_at": results[0].created_at,
@@ -129,7 +128,6 @@ router.get('/', async function(req, res, next) {
                     "player2_cp_start": results[0].player2_cp_start,
                     "player2_cp_current": results[0].player2_cp_current
                 }
-            }
 
             res.render('tracker', {"gameData": gameData });
         };
