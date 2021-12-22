@@ -5,13 +5,16 @@ block scripts
 
 block content
   h1 GameId: #{gameData.game_id}
-    div.center-wrap
-      div.form-group
-        label(for='p1name') Player 1:
-        input.form-style#p1name(type='text' name='p1name' value=gameData.player1_name)
-        i.input-icon.uil.uil-user
-      div.form-group.mt-2
-        label(for='p2name') Player 2:
-        input.form-style#p2name(type='text' name='p2name' value=gameData.player2_name)
-        i.input-icon.uil.uil-user
-      input.btn.mt-4(type='submit' value='Save')
+  div.card-3d-wrap.mx-auto
+    div.card-3d-wrapper
+      div.card-front
+        div.center-wrap
+          div.form-group
+            label(for='p1name') Player 1:
+            input.form-style#p1name(type='text' name='p1name' value=gameData.player1_name)
+            i.input-icon.uil.uil-user
+          div.form-group.mt-2
+            label(for='p2name') Player 2:
+            input.form-style#p2name(type='text' name='p2name' value=gameData.player2_name)
+            i.input-icon.uil.uil-user
+          input.btn.mt-4(type='submit' value='Save')
