@@ -12,10 +12,10 @@ const pool = new Pool({
   }
 });
 
-async function asyncDB() {
+async function asyncDB(gameId) {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM games');
+      const result = await client.query('SELECT * FROM games WHERE game_id=\''+gameId+'\'');
       const results = { 'results': (result) ? result.rows : null};
       console.log("results: "+results);
       client.release();
@@ -48,7 +48,7 @@ router.get('/', async function(req, res, next) {
             res.render('game', {gameId: gameId, title: "Game Tracker"});
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
-            var results2 = await asyncDB();
+            var results2 = await asyncDB(gameId);
             res.json(results2);
         };
     } catch (err) {
