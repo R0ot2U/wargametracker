@@ -51,7 +51,7 @@ router.get('/', async function(req, res, next) {
             var results2 = await asyncDB(req.query.gameId);
             console.log(results2.game_Id);
                 var gameData = {
-                    "game_id": results2.gameId,
+                    "game_id": results2.game_id,
                     "created_at": results2.created_at,
                     "updated_at": results2.updated_at,
                     "game_description": results2.game_description,
@@ -128,7 +128,7 @@ router.get('/', async function(req, res, next) {
                     "player2_cp_start": results2.player2_cp_start,
                     "player2_cp_current": results2.player2_cp_current
                 }
-            console.log("gameData: "+gameData);
+            console.log("gameData: "+gameData.game_id);
             res.render('tracker', {"gameData": gameData });
         };
     } catch (err) {
