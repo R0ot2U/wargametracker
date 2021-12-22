@@ -6,12 +6,14 @@ block scripts
 block content
   h1 GameId: #{gameData.game_id}
   form
-    label(for='p1name') Player 1:
-    input.form-style#p1name(type='text' name='p1name' value=gameData.player1_name)
-    br
-    br
-    label(for='p2name') Player 2:
-    input#p2name(type='text' name='p2name' value=gameData.player2_name)
-    br
-    br
-    input(type='submit' value='Save')
+    div.form-group
+      label(for='p1name') Player 1:
+      input.form-style#p1name(type='text' name='p1name' value=gameData.player1_name)
+      i.input-icon.uil.uil-user
+      br
+      br
+      label(for='p2name') Player 2:
+      input#p2name(type='text' name='p2name' value=gameData.player2_name)
+      br
+      br
+      input(type='submit' value='Save')
