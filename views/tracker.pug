@@ -6,12 +6,12 @@ block scripts
 block content
   h1 GameId: #{gameData.game_id}
   form
-    label(for='fname') Player 1:
-    input#fname(type='text' name='fname' value=gameData.player1_name)
+    label(for='p1name') Player 1:
+    input#fname(type='text' name='p1name' value=gameData.player1_name)
     br
     br
-    label(for='lname') Player 2:
-    input#lname(type='text' name='lname' value=gameData.player2_name))
+    label(for='p2name') Player 2:
+    input#lname(type='text' name='p2name' value=gameData.player2_name))
     br
     br
-    input(type='submit' value='Save')
+    input(type='submit' value='Submit')
