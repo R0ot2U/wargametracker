@@ -49,7 +49,7 @@ router.get('/', async function(req, res, next) {
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
             var results2 = await asyncDB(req.query.gameId);
-            res.json(results2);
+            res.render('tracker', {json: results2});
         };
     } catch (err) {
         console.error(err);
