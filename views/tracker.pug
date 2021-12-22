@@ -5,16 +5,26 @@ block scripts
 
 block content
   h1 GameId: #{gameData.game_id}
-  div.card-3d-wrap.mx-auto
-    div.card-3d-wrapper
-      div.card-front
-        div.center-wrap
-          div.form-group
-            label(for='p1name') Player 1:
-            input#p1name.form-style(type='text' name='p1name' value=gameData.player1_name)
-            i.input-icon.uil.uil-user
-          div.form-group.mt-2
-            label(for='p2name') Player 2:
-            input#p2name.form-style(type='text' name='p2name' value=gameData.player2_name)
-            i.input-icon.uil.uil-user
-          input.btn.mt-4(type='submit' value='Save')
+  .section
+  .container
+    .row.full-height.justify-content-center
+      .col-12.text-center.align-self-center.py-5
+        .section.pb-5.pt-5.pt-sm-2.text-center
+          h6.mb-0.pb-3
+            span Log In 
+            span Sign Up
+          input#reg-log.checkbox(type='checkbox' name='reg-log')
+          label(for='reg-log')
+          div.card-3d-wrap.mx-auto
+            div.card-3d-wrapper
+              div.card-front
+                div.center-wrap
+                  div.form-group
+                    label(for='p1name') Player 1:
+                    input#p1name.form-style(type='text' name='p1name' value=gameData.player1_name)
+                    i.input-icon.uil.uil-user
+                  div.form-group.mt-2
+                    label(for='p2name') Player 2:
+                    input#p2name.form-style(type='text' name='p2name' value=gameData.player2_name)
+                    i.input-icon.uil.uil-user
+                  input.btn.mt-4(type='submit' value='Save')
