@@ -49,9 +49,9 @@ router.get('/', async function(req, res, next) {
         } else if(req._parsedOriginalUrl.query != null) {
             console.log(req._parsedOriginalUrl.query);
             var results2 = await asyncDB(req.query.gameId);
-            //console.log(results2.rows);
+            console.log(results2.game_Id);
                 var gameData = {
-                    "game_id": results2[0].gameId,
+                    "game_id": results2.gameId,
                     "created_at": results2[0].created_at,
                     "updated_at": results2[0].updated_at,
                     "game_description": results2[0].game_description,
