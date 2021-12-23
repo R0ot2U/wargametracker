@@ -5,44 +5,42 @@ block scripts
 
 block content
   h1 GameId: #{gameData.game_id}
-  a.logo(href='https://front.codes/' target='_blank')
-  img(src='https://assets.codepen.io/1462889/fcy.png' alt='')
-.section
-  .container
-    .row.full-height.justify-content-center
-      .col-12.text-center.align-self-center.py-5
-        .section.pb-5.pt-5.pt-sm-2.text-center
-          h6.mb-0.pb-3
-            span Log In 
-            span Sign Up
-          input#reg-log.checkbox(type='checkbox' name='reg-log')
-          label(for='reg-log')
-          .card-3d-wrap.mx-auto
-            .card-3d-wrapper
-              .card-front
-                .center-wrap
-                  .section.text-center
-                    h4.mb-4.pb-3 Log In
-                    .form-group
-                      input#logemail.form-style(type='email' name='logemail' placeholder='Your Email' autocomplete='off')
-                      i.input-icon.uil.uil-at
-                    .form-group.mt-2
-                      input#logpass.form-style(type='password' name='logpass' placeholder='Your Password' autocomplete='off')
-                      i.input-icon.uil.uil-lock-alt
-                    a.btn.mt-4(href='#') submit
-                    p.mb-0.mt-4.text-center
-                      a.link(href='#0') Forgot your password?
-              .card-back
-                .center-wrap
-                  .section.text-center
-                    h4.mb-4.pb-3 Sign Up
-                    .form-group
-                      input#logname.form-style(type='text' name='logname' placeholder='Your Full Name' autocomplete='off')
-                      i.input-icon.uil.uil-user
-                    .form-group.mt-2
-                      input#logemail.form-style(type='email' name='logemail' placeholder='Your Email' autocomplete='off')
-                      i.input-icon.uil.uil-at
-                    .form-group.mt-2
-                      input#logpass.form-style(type='password' name='logpass' placeholder='Your Password' autocomplete='off')
-                      i.input-icon.uil.uil-lock-alt
-                    a.btn.mt-4(href='#') submit
+  .section
+    .container
+      .row.full-height.justify-content-center
+        .col-12.text-center.align-self-center.py-5
+          .section.pb-5.pt-5.pt-sm-2.text-center
+            h6.mb-0.pb-3
+              span Log In 
+              span Sign Up
+            input#reg-log.checkbox(type='checkbox' name='reg-log')
+            label(for='reg-log')
+            .card-3d-wrap.mx-auto
+              .card-3d-wrapper
+                .card-front
+                  .center-wrap
+                    .section.text-center
+                      h4.mb-4.pb-3 Log In
+                      .form-group
+                        input#logemail.form-style(type='email' name='logemail' placeholder='Your Email' autocomplete='off')
+                        i.input-icon.uil.uil-at
+                      .form-group.mt-2
+                        input#logpass.form-style(type='password' name='logpass' placeholder='Your Password' autocomplete='off')
+                        i.input-icon.uil.uil-lock-alt
+                      a.btn.mt-4(href='#') submit
+                      p.mb-0.mt-4.text-center
+                        a.link(href='#0') Forgot your password?
+                .card-back
+                  .center-wrap
+                    .section.text-center
+                      h4.mb-4.pb-3 Sign Up
+                      .form-group
+                        input#logname.form-style(type='text' name='logname' placeholder='Your Full Name' autocomplete='off')
+                        i.input-icon.uil.uil-user
+                      .form-group.mt-2
+                        input#logemail.form-style(type='email' name='logemail' placeholder='Your Email' autocomplete='off')
+                        i.input-icon.uil.uil-at
+                      .form-group.mt-2
+                        input#logpass.form-style(type='password' name='logpass' placeholder='Your Password' autocomplete='off')
+                        i.input-icon.uil.uil-lock-alt
+                      a.btn.mt-4(href='#') submit
