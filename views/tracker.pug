@@ -12,4 +12,8 @@ block content
   div.form-group.mt-2
     label(for='p2name') Player 2:
     input#p2name(type='text' name='p2name' value=gameData.player2_name)
-  input(action=# type='submit' value='Save')
+  .number
+    span.minus -
+    input(type='text' value='1')
+    span.plus +
+  input(type='submit' value='Save')
